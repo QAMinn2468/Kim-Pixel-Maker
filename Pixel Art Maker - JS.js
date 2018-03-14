@@ -1,5 +1,5 @@
-$("form").on("submit", function (event){
-
+$("form").on("submit", function (e){
+  e.preventDefault();
   const rowLengthInput = #inputWidthK;
   const columnHeightInput = #inputHeightK;
   const rowLengthValue = $(inputWidthK).val();
