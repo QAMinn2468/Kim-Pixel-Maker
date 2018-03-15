@@ -35,3 +35,4 @@ $(table).on("click", "td", function() {
 $(table).on("dblclick", "td", function() {
     $(this).removeAttr("style");
 });
+
