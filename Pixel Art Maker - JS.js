@@ -31,7 +31,3 @@ function clearGrid (){
     table.removeChild(table.firstChild);
   }}
 
-//$("color").addEventListener("click", colorMe());
-
-/*function colorMe (){
-    table.attr(background-color, color);
