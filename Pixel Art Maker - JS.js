@@ -1,54 +1,37 @@
-$("form").on("submit", function (e){
-  e.preventDefault();
-  const rowLengthInput = #inputWidthK;
-  const columnHeightInput = #inputHeightK;
-  const rowLengthValue = $(inputWidthK).val();
-  const columnHeightValue = $(inputHeightK).val();
+var table = document.getElementById("pixelCanvas"); //retrieve table element
+var height = document.getElementById("inputHeightK"); //retrieve Height
+var width = document.getElementById("inputWidthK"); //retrieve Width 
+var color = document.getElementById("colorPicker"); //retrieve current color
+var sizePicker = document.getElementById("sizePicker"); //retrieve form
+
+
+sizePicker.onsubmit = function(event){
   event.preventDefault();
-  makeGrid(rowLengthValue, columnHeightValue);
-  colorPaint();
-
-columnHeightInput.on("change", function (){
-    columnHeightValue = $(this).val();
-});
-rowLengthInput.on("change", function (){
-    rowLengthValue = $(this).val();
-})
-for (let n = 1, n<= #inputWidthK, n++) {   //while inputWidth is between 1 and value.
-    $("#pixelCanvas").append("<tr class = "n);  //create 1 <tr class = #+1 </tr> tag each pass
-    for (let m = 1, m<= #inputHeightK, m++) {  //while inputHeight is between 1 and value.
-         $("#pixelCanvas").append("<td class = "m"></td>");//create 1 <td class = #+1 > </td> tag each pass
-  }
-          $("#pixelCanvas").append("></tr>");
-});
+  clearGrid();
+  makeGrid();
+}
 
 
 
-$('#colorPicker')
-
-
-const grid = #pixelCanvas;
-const colorCurrent = #colorPicker;  //label for color currently in use.
-
-// Select color input .toggleclass()?
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-$("kSubmit").on(makeGrid());
 function makeGrid() {
 
-
-  }
-//<caption> </caption> add a caption?
-
-
-//  while height <= inputHeight {
-//    while width <= inputWidth {}
-
-  }
-  }
-
-// Your code goes here!
+for (let n = 0; n< width.value; n++) {   //while inputWidth is between 1 and value.
+      const row = table.insertRow(n);
+    for (let m = 0; m<  height.value; m++) {  //while inputHeight is between 1 and value.
+      const cell = row.insertCell(m);
+//      cell.addEventListener("click", colorMe());
+//      const w = $("currentCell");
 
 }
-});
+  }
+}
+
+function clearGrid (){
+  while (table.firstChild){
+    table.removeChild(table.firstChild);
+  }}
+
+//$("color").addEventListener("click", colorMe());
+
+/*function colorMe (){
+    table.attr(background-color, color);
