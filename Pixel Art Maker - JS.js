@@ -14,10 +14,9 @@ sizePicker.onsubmit = function(event){
 
 
 function makeGrid() {
-
-for (let n = 0; n< width.value; n++) {   //while inputWidth is between 1 and value.
+for (let n = 0; n< height.value; n++) {   //while inputWidth is between 1 and value.
       const row = table.insertRow(n);
-    for (let m = 0; m<  height.value; m++) {  //while inputHeight is between 1 and value.
+    for (let m = 0; m< width.value; m++) {  //while inputHeight is between 1 and value.
       const cell = row.insertCell(m);
 //      cell.addEventListener("click", colorMe());
 //      const w = $("currentCell");
