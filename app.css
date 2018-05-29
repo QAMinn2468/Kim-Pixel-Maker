@@ -32,6 +32,6 @@ td {
     width: 20px;
 }
 
-input {
+input[type="number"]  {
     width: 5em;
 }

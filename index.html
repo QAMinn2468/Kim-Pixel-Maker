@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pixel Art Maker!</title>
+    <title>Kim's Pixel Art Maker!</title>
 
-    <link rel="stylesheet" href="Pixel-Art-Maker-CSS.css">
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
     <h1>Kim's Pixel Art Maker</h1>
@@ -11,9 +11,9 @@
     <h2>Choose Grid Size</h2>
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="inputHeightK" name="height" min="1" value="1">
+        <input type="number" id="inputHeight" name="height" min="1" value="1">
         Grid Width:
-        <input type="number" id="inputWidthK" name="width" min="1" value="1">
+        <input type="number" id="inputWidth" name="width" min="1" value="1">
         <input type="submit">
     </form>
 
@@ -22,9 +22,10 @@
 
     <h2>Design Canvas</h2>
     <table id="pixelCanvas"></table>
+    <caption class="caption">Click once to color, double click to erase.</caption>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script async src ="adesign.js"></script>
+    <script async src ="app.js"></script>
 </body>
 
 </html>
