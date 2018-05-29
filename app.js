@@ -4,7 +4,7 @@ const width = document.getElementById("inputWidth"); //retrieve Width
 const color = document.getElementById("colorPicker"); //retrieve current color
 const sizePicker = document.getElementById("sizePicker"); //retrieve form
 
-sizePicker.onsubmit = function(event){
+sizePicker.addEventListener('submit', function(event){
   event.preventDefault();
   clearGrid();
   makeGrid();
